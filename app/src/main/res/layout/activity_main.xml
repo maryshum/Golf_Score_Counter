@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mishk.myapplication.MainActivity">
+
+
+    <TextView
+        android:id="@+id/player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/player2"
+        android:layout_alignBottom="@+id/player2"
+        android:layout_alignEnd="@+id/pic_player1"
+        android:layout_alignRight="@+id/pic_player1"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/nameOfPlayer1"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/pic_player2"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/pic_player2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/nameOfPlayer2"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pic_player1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/player1"
+        android:layout_marginLeft="62dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/golfer1"
+        app:civ_border_color="@android:color/holo_red_light"
+        app:civ_border_width="1dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pic_player2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/pic_player1"
+        android:layout_marginEnd="51dp"
+        android:layout_marginRight="51dp"
+        android:src="@drawable/golfer2"
+        app:civ_border_color="@android:color/holo_blue_bright"
+        app:civ_border_width="1dp" />
+
+    <TextView
+        android:id="@+id/totalScoreForPlayer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/totalScoreForPlayer2"
+        android:layout_alignBottom="@+id/totalScoreForPlayer2"
+        android:layout_alignLeft="@+id/player1"
+        android:layout_alignStart="@+id/player1"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:text="@string/startingScore"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/totalScoreForPlayer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/pic_player2"
+        android:layout_marginEnd="85dp"
+        android:layout_marginRight="85dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/startingScore"
+        android:textSize="50sp" />
+
+    <ImageView
+        android:id="@+id/hole1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hole2"
+        android:layout_alignStart="@+id/hole2"
+        android:layout_below="@+id/totalScoreForPlayer1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/golf1" />
+
+    <Button
+        android:id="@+id/minus_button1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/pic_player1"
+        android:layout_alignStart="@+id/pic_player1"
+        android:layout_below="@+id/hole1"
+        android:background="@color/colorAccent"
+        android:onClick="setScoreForH1ForGolfer1"
+        android:padding="8dp"
+        android:text="@string/minus"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/scoreForH1Golfer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/minus_button1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toEndOf="@id/minus_button1"
+        android:layout_toRightOf="@id/minus_button1"
+        android:text="@string/startingScore"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/plus_button1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/hole1"
+        android:layout_toEndOf="@+id/scoreForH1Golfer1"
+        android:layout_toRightOf="@+id/scoreForH1Golfer1"
+        android:background="@color/colorAccent"
+        android:onClick="setScoreForH1ForGolfer1"
+        android:padding="8dp"
+        android:text="@string/plus"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/minus1H1P2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/hole1"
+        android:layout_toLeftOf="@+id/totalScoreForPlayer2"
+        android:layout_toStartOf="@+id/totalScoreForPlayer2"
+        android:background="@color/colorAccent"
+        android:onClick="setScoreForH1ForGolfer2"
+        android:padding="8dp"
+        android:text="@string/minus"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/scoreForH1Golfer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/minus1H1P2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toEndOf="@id/minus1H2P2"
+        android:layout_toRightOf="@id/minus1H1P2"
+        android:text="@string/startingScore"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/plusH1P2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/minus1H1P2"
+        android:layout_toEndOf="@+id/scoreForH1Golfer2"
+        android:layout_toRightOf="@+id/scoreForH1Golfer2"
+        android:background="@color/colorAccent"
+        android:onClick="setScoreForH1ForGolfer2"
+        android:padding="8dp"
+        android:text="@string/plus"
+        android:textColor="@android:color/black" />
+
+    <ImageView
+        android:id="@+id/hole2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/minus1H1P2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/golf2" />
+
+    <Button
+        android:id="@+id/minus1H2P1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/minus_button1"
+        android:layout_alignStart="@+id/minus_button1"
+        android:layout_below="@+id/hole2"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorAccent"
+        android:onClick="setScoreForH2ForGolfer1"
+        android:padding="8dp"
+        android:text="@string/minus"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/scoreForH2Golfer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/minus1H2P1"
+        android:layout_alignBottom="@+id/minus1H2P1"
+        android:layout_alignEnd="@+id/scoreForH1Golfer1"
+        android:layout_alignRight="@+id/scoreForH1Golfer1"
+        android:text="@string/startingScore"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/plus1H2P1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/minus1H2P1"
+        android:layout_alignLeft="@+id/plus_button1"
+        android:layout_alignStart="@+id/plus_button1"
+        android:background="@color/colorAccent"
+        android:onClick="setScoreForH2ForGolfer1"
+        android:padding="8dp"
+        android:text="@string/plus"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/minus1H2P2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/minus1H2P1"
+        android:layout_alignLeft="@+id/minus1H1P2"
+        android:layout_alignStart="@id/minus1H1P2"
+        android:background="@color/colorAccent"
+        android:onClick="setScoreForH2ForGolfer2"
+        android:padding="8dp"
+        android:text="@string/minus"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/scoreForH2Golfer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/minus1H2P2"
+        android:layout_alignBottom="@+id/minus1H2P2"
+        android:layout_alignLeft="@+id/scoreForH1Golfer2"
+        android:layout_alignStart="@+id/scoreForH1Golfer2"
+        android:text="@string/startingScore"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/plus1H2P2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/minus1H2P2"
+        android:layout_alignLeft="@+id/plusH1P2"
+        android:layout_alignStart="@+id/plusH1P2"
+        android:background="@color/colorAccent"
+        android:onClick="setScoreForH2ForGolfer2"
+        android:padding="8dp"
+        android:text="@string/plus"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/pic_player2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/pic_player2"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_red_light"
+        android:onClick="resetScore"
+        android:text="@string/reset_button_text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignEnd="@+id/pic_player1"
+        android:layout_alignRight="@+id/pic_player1"
+        android:text="@string/total_score_button"
+        android:background="@color/colorPrimary"
+        android:onClick="setTotalScoreForPlayers"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"/>
+</RelativeLayout>
+
+

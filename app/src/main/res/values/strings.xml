@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Score Play</string>
+    <string name="nameOfPlayer1">Golfer 1</string>
+    <string name="nameOfPlayer2">Golfer 2</string>
+    <string name="startingScore">0</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="reset_button_text">Reset</string>
+    <string name="total_score_button">Sum up</string>
+
+</resources>
